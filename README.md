@@ -11,15 +11,19 @@ Using Pix2Pix, we aim to enhance the resolution of satellite imagery, often term
 Our model can simulate forest recovery from pre- to post-recovery states, using training data to forecast recovery under various conditions, aiding in conservation efforts.
 
 ## Data Source
-Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training.
+Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training.Below are sample images to demonstrate the required pairwise data structure for training set.
+![Sample Training Data](path_to_training_data_image)
 
 ## Architecture
-Pix2Pix employs a U-Net architecture, featuring contracting and expanding blocks:
+The generator of Pix2Pix is based on the **U-Net architecture**, featuring contracting and expanding blocks:
 - **Contracting blocks** compress the input into a high-dimensional space.
 - **Expanding blocks** reconstruct the image from this compressed representation.
 - **Skip connections** preserve features lost during downsampling, enhancing feature transmission between blocks.
-- The **discriminator** assesses image realism using a "Discriminator Patch Gan," offering more granular feedback than typical cGANs.
+The image below, taken from the paper "U-Net: Convolutional Networks for Biomedical Image Segmentation" by Ronneberger et al., 2015(https://arxiv.org/abs/1505.04597) depicts the U-Net architecture, demonstrating its contracting and then expanding processes.    
+![Pix2Pix Training Data Architecture](path_to_image)
 
+
+The **discriminator**  is based on the contracting path of the U-Net, assesses image realism using a "Discriminator Patch Gan," offering more granular feedback than typical cGANs.
 For detailed insights, refer to the [Image-to-Image Translation with Conditional Adversarial Networks paper by Isola et al., 2017](https://arxiv.org/abs/1611.07004).
 
 ## Result Illustration
@@ -30,7 +34,7 @@ For detailed insights, refer to the [Image-to-Image Translation with Conditional
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
 
 ### Enhancing Image Quality
-In scenarios where satellite images are blurry due to sensor limitations or weather conditions, a robustly trained Pix2Pix model can enhance these images to high-resolution, clear visuals. This significantly improves the accuracy of environmental assessments.
+In our project, blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess environmental changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery
 
 ### Forest Recovery Scenarios
 By training on images showing forests before and after recovery, the model learns to transform these images, simulating potential recovery outcomes. This application aids in planning and resource allocation for forest conservation.
