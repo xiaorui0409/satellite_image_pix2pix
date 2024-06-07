@@ -35,6 +35,7 @@ The link for the pretrained model: https://drive.google.com/drive/folders/1BECzZ
 ## Result Illustration
 ![Pix2Pix Training Data Architecture](images/result.png)
 This image showcases the training data architecture for our Pix2Pix model, aimed at image enhancement tasks.
+
 **Input Image:** A simplified abstract representation guiding the generative process.
 **Ground Truth:** A high-resolution photograph showcasing the target output.
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
