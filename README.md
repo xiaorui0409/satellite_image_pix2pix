@@ -11,7 +11,7 @@ Using Pix2Pix, we aim to enhance the resolution of satellite imagery, often term
 Our model can simulate forest recovery from pre- to post-recovery states, using training data to forecast recovery under various conditions, aiding in conservation efforts.
 
 ## Data Source
-Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training.Below are sample images to demonstrate the required pairwise data structure for training set.
+Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training. Below are sample images to demonstrate the required pairwise data structure for training set.
 ![Sample Training Data](images/Figure_1.png)
 
 ## Architecture
