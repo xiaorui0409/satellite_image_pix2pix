@@ -40,10 +40,12 @@ This figure displays the training data structure and the predicted outcomes from
 **Ground Truth:** A high-resolution photograph showcasing the target output.
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
 
-### case1: Enhancing Satellite Image Quality
-Blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
+### case1: Enhancing Satellite Image Quality 
+In the first application, we aim to enhance the resolution of satellite imagery. 
+In the practice, Blurry satellite images from sensor limitations or extreme weather can only provide limited information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
 
 ### case2:  *Simulating Forest Recovery Scenarios
+In the seond application,  we can leverage the trained model to simulate forest recovery from pre- to post-recovery states.
 By training on images showing forests before and after recovery, the model learns to transform these images, simulating potential recovery outcomes. This application aids in planning and resource allocation for forest conservation.
 
 ## Potential Challenges
