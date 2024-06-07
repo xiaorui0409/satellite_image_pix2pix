@@ -15,7 +15,7 @@ Due to restrictions on accessing the original dataset, we utilize the [VOCSegmen
 ![Sample Training Data](images/Figure_1.png)
 
 ## Architecture
-The generator of Pix2Pix is based on the **U-Net architecture**, featuring contracting and expanding blocks:
+The **generator** of Pix2Pix is based on the **U-Net architecture**, featuring contracting and expanding blocks:
 - **Contracting blocks** compress the input into a high-dimensional space.
 - **Expanding blocks** reconstruct the image from this compressed representation.
 - **Skip connections** preserve features lost during downsampling, enhancing feature transmission between blocks.
@@ -40,7 +40,7 @@ The link for the pretrained model: https://drive.google.com/drive/folders/1BECzZ
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
 
 ### Enhancing Image Quality
-In our project, blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess environmental changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery
+In our project, blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
 
 ### Forest Recovery Scenarios
 By training on images showing forests before and after recovery, the model learns to transform these images, simulating potential recovery outcomes. This application aids in planning and resource allocation for forest conservation.
