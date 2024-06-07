@@ -7,7 +7,7 @@
 ### 1. **Enhancing Satellite Image Quality**
 Using Pix2Pix, we aim to enhance the resolution of satellite imagery, often termed "super-resolution." This technique is crucial where high-resolution data is essential but restricted by sensor limitations or atmospheric conditions.
 
-### 2. **Generating Forest Recovery Scenarios**
+### 2. **Simulating Forest Recovery Scenarios**
 Our model can simulate forest recovery from pre- to post-recovery states, using training data to forecast recovery under various conditions, aiding in conservation efforts.
 
 ## Data Source
@@ -40,10 +40,10 @@ This figure displays the training data structure and the predicted outcomes from
 **Ground Truth:** A high-resolution photograph showcasing the target output.
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
 
-### case1: Enhancing Image Quality
-In our project, blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
+### case1: Enhancing Satellite Image Quality
+Blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
 
-### case2:  Forest Recovery Scenarios
+### case2:  *Simulating Forest Recovery Scenarios
 By training on images showing forests before and after recovery, the model learns to transform these images, simulating potential recovery outcomes. This application aids in planning and resource allocation for forest conservation.
 
 ## Potential Challenges
