@@ -19,6 +19,7 @@ The generator of Pix2Pix is based on the **U-Net architecture**, featuring contr
 - **Contracting blocks** compress the input into a high-dimensional space.
 - **Expanding blocks** reconstruct the image from this compressed representation.
 - **Skip connections** preserve features lost during downsampling, enhancing feature transmission between blocks.
+
 The image below, taken from the paper "U-Net: Convolutional Networks for Biomedical Image Segmentation" by Ronneberger et al., 2015(https://arxiv.org/abs/1505.04597) depicts the U-Net architecture, demonstrating its contracting and then expanding processes.    
 ![Pix2Pix Training Data Architecture](path_to_image)
 
