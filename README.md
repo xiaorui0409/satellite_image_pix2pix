@@ -12,7 +12,7 @@ Our model can simulate forest recovery from pre- to post-recovery states, using 
 
 ## Data Source
 Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training.Below are sample images to demonstrate the required pairwise data structure for training set.
-![Sample Training Data](Figure_1)
+![Sample Training Data](images\Figure_1)
 
 ## Architecture
 The generator of Pix2Pix is based on the **U-Net architecture**, featuring contracting and expanding blocks:
@@ -21,14 +21,19 @@ The generator of Pix2Pix is based on the **U-Net architecture**, featuring contr
 - **Skip connections** preserve features lost during downsampling, enhancing feature transmission between blocks.
 
 The image below, taken from the paper "U-Net: Convolutional Networks for Biomedical Image Segmentation" by Ronneberger et al., 2015(https://arxiv.org/abs/1505.04597) depicts the U-Net architecture, demonstrating its contracting and then expanding processes.    
-![Pix2Pix Training Data Architecture](path_to_image)
+![Pix2Pix Training Data Architecture](images\U_network)
 
 
 The **discriminator**  is based on the contracting path of the U-Net, assesses image realism using a "Discriminator Patch Gan," offering more granular feedback than typical cGANs.
 For detailed insights, refer to the [Image-to-Image Translation with Conditional Adversarial Networks paper by Isola et al., 2017](https://arxiv.org/abs/1611.07004).
 
+## Load the pretrained model
+You'll be able to see the model train starting from a pre-trained checkpoint in the main() - but feel free to train it from scratch on your own too.
+
+The link for the pretrained model: https://drive.google.com/drive/folders/1BECzZWBK1Xbn6RuJil5jl8Nrkv3lTJCq?usp=drive_link
+
 ## Result Illustration
-![Pix2Pix Training Data Architecture](path_to_image)
+![Pix2Pix Training Data Architecture](images\result)
 
 **Input Image:** A simplified abstract representation guiding the generative process.
 **Ground Truth:** A high-resolution photograph showcasing the target output.
