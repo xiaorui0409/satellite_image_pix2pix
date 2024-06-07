@@ -34,15 +34,15 @@ The link for the pretrained model: https://drive.google.com/drive/folders/1BECzZ
 
 ## Result Illustration
 ![Pix2Pix Training Data Architecture](images/result.png)
-
+This image showcases the training data architecture for our Pix2Pix model, aimed at image enhancement tasks.
 **Input Image:** A simplified abstract representation guiding the generative process.
 **Ground Truth:** A high-resolution photograph showcasing the target output.
 **Predicted Image:** Demonstrates the model's capability to transform basic inputs into detailed and realistic outputs.
 
-### Enhancing Image Quality
+### case1: Enhancing Image Quality
 In our project, blurry satellite images from sensor limitations or extreme weather provide minimal information, making it difficult to accurately assess forest recovery changes. Using a model trained on paired datasets, we enhance these blurry images to high-resolution, clear visuals, significantly improving our evaluation of forest recovery status.
 
-### Forest Recovery Scenarios
+### case2:  Forest Recovery Scenarios
 By training on images showing forests before and after recovery, the model learns to transform these images, simulating potential recovery outcomes. This application aids in planning and resource allocation for forest conservation.
 
 ## Potential Challenges
