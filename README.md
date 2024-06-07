@@ -12,7 +12,7 @@ Our model can simulate forest recovery from pre- to post-recovery states, using 
 
 ## Data Source
 Due to restrictions on accessing the original dataset, we utilize the [VOCSegmentation dataset](https://pytorch.org/vision/main/generated/torchvision.datasets.VOCSegmentation.html) to train our model. This dataset includes essential pairs of original images and segmentation masks. Our custom `VOCPairedDataset` class ensures each segmentation mask aligns with its corresponding real image for effective training.Below are sample images to demonstrate the required pairwise data structure for training set.
-![Sample Training Data](path_to_training_data_image)
+![Sample Training Data](Figure_1)
 
 ## Architecture
 The generator of Pix2Pix is based on the **U-Net architecture**, featuring contracting and expanding blocks:
